@@ -27,3 +27,6 @@ function heapify(arr,n,i){
      }
      
 }
+let arr = [12, 11, 13, 5, 6, 7];
+heapSort(arr);
+console.log("Sorted array:", arr);
