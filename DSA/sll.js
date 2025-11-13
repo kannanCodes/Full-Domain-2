@@ -148,6 +148,19 @@ class Sll{
           }
           this.head = prev;
      }
+     reverseRecursively(){
+          this.head = this.reverse(this.head)
+     }
+     reverse(node){
+          if (!node || !node.next){
+               return node;
+          }
+          let newHead = this.reverse(node.next);
+          node.next.next = node;
+          node.next = null;
+
+          return newHead;
+     }
 }
 let sll = new Sll()
 sll.insert(10)
@@ -163,6 +176,7 @@ sll.insertAtPosition(1,15)
 // sll.print()
 // console.log('Max',sll.findMax())
 sll.print();
-sll.reverseList();
+// sll.reverseList();
+sll.reverseRecursively()
 console.log('REVERSAL')
 sll.print()
