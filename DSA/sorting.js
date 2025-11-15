@@ -99,6 +99,7 @@ function partition(arr,low,high){
           }
      }
      [arr[low],arr[j]]=[arr[j],arr[low]]
+     return j;
 }
 function quickSort(arr,low= 0, high = arr.length-1){
      if (low < high){

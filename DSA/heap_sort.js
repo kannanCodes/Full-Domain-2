@@ -23,7 +23,7 @@ function heapify(arr,n,i){
      }
      if (largest !==i){
           [arr[largest],arr[i]] = [arr[i],arr[largest]]
-          heapify(arr,n,largest)
+          heapify(arr,n,largest)                                                   
      }
      
 }
